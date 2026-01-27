@@ -121,6 +121,71 @@
 
   .nav-links a::after{display:none}
 }
+
+    .bg-video{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-1;
+}
+.hero{
+  max-width:900px;
+  margin:4rem auto;
+  /* padding:0 2rem; */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#fff;
+  min-height:80vh;
+  display:flex;
+  align-items:flex-start;   /* move content up */
+  padding-top:6rem;         /* control vertical position */
+}
+
+
+
+
+
+.hero-text h1{
+  font-size:3.2rem;
+  font-weight:700;
+  line-height:1.1;
+  margin-bottom:1rem;
+  letter-spacing:-1px;
+  font-style:oblique;
+
+}
+
+.hero-text p{
+  max-width:480px;
+  font-size:1.05rem;
+  line-height:1.6;
+  color:rgba(255,255,255,.85);
+  font-style: italic;
+}
+
+
+.hero-image img{
+  width:480px;
+  height:auto;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    gap:2rem;
+  }
+
+  .hero-image img{
+    width:140px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -146,5 +211,24 @@
 
   </div>
 </nav>
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="bg.mp4" type="video/mp4">
+</video>
+
+
+    <main class="hero">
+  <div class="hero-text">
+    <h1>Hi, I’m Vivek</h1>
+<p>
+  A passionate web developer focused on creating clean, responsive, and user-friendly websites using modern HTML and CSS.
+</p>
+
+  </div>
+
+  <div class="hero-image">
+    <img src="logo.png" alt="Vivek Logo">
+  </div>
+</main>
+
 </body>
 </html>
